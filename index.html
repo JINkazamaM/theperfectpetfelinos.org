@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miami Cat Rescue | Elizabeth Garcia</title>
-  <meta name="description" content="Rescuing stray cats in Miami & Sebring. Adopt, donate, help.">
-  <meta property="og:title" content="Miami Cat Rescue">
-  <meta property="og:description" content="Elizabeth Garcia saves feline lives. Join us!">
-  <meta property="og:image" content="https://files.catbox.moe/z871a1.JPG">
+  <title>Gallery | Miami Cat Rescue</title>
+  <meta name="description" content="Rescued cats by Elizabeth Garcia - Miami & Sebring">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
   <style>
     :root {
@@ -22,126 +19,84 @@
       --text: #eee;
       --card: #222;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: var(--bg); color: var(--text); transition: all .5s; }
-    header { padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; background: var(--card); box-shadow: 0 2px 10px rgba(0,0,0,.1); position: sticky; top: 0; z-index: 10; }
-    .logo { font-size: 1.6rem; font-weight: bold; color: var(--primary); }
-    nav { display: flex; gap: 1.2rem; align-items: center; }
-    nav a { text-decoration: none; color: var(--text); font-weight: 600; }
-    nav a:hover { color: var(--primary); }
-    .dark-btn { background: var(--primary); color: #fff; border: none; padding: .5rem 1rem; border-radius: 999px; cursor: pointer; }
-    .hero { background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1350'); background-size: cover; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 1rem; position: relative; overflow: hidden; }
-    .hero h1 { font-size: 2.8rem; margin: .8rem 0; z-index: 2; }
-    .btn { padding: .9rem 1.8rem; border-radius: 999px; font-weight: bold; text-decoration: none; display: inline-block; margin: .5rem; transition: .3s; }
-    .btn:hover { transform: translateY(-4px); box-shadow: 0 6px 15px rgba(0,0,0,.3); }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-secondary { background: var(--secondary); color: #fff; }
-    .section { padding: 3rem 5%; text-align: center; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,.1); }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card-body { padding: 1.2rem; }
-    footer { background: #000; color: #fff; padding: 1.5rem; text-align: center; }
-    /* Cat jump animation */
-    .donny-jump { position: absolute; bottom: -150px; left: 50%; transform: translateX(-50%); width: 250px; z-index: 1; animation: jump-in 2.5s ease-out forwards; text-align: center; }
-    .donny-jump video { width: 100%; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
-    @keyframes jump-in {
-      0% { bottom: -150px; transform: translateX(-50%) rotate(0deg); opacity: 0; }
-      50% { bottom: 20%; transform: translateX(-50%) rotate(10deg); opacity: 1; }
-      70% { bottom: 30%; transform: translateX(-50%) rotate(-10deg); }
-      100% { bottom: 40%; transform: translateX(-50%) scale(1.1); opacity: 1; }
-    }
-    @media (max-width: 768px) { .donny-jump { width: 180px; } .hero h1 { font-size: 2rem; } }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body { background:var(--bg); color:var(--text); transition:all .5s; }
+    header { padding:1rem 5%; background:var(--card); box-shadow:0 2px 10px rgba(0,0,0,.1); position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.6rem; font-weight:bold; color:var(--primary); }
+    nav { display:flex; gap:1.2rem; align-items:center; }
+    nav a { text-decoration:none; color:var(--text); font-weight:600; }
+    nav a:hover { color:var(--primary); }
+    .dark-btn { background:var(--primary); color:#fff; border:none; padding:.5rem 1rem; border-radius:999px; cursor:pointer; }
+    .gallery { padding:4rem 5%; text-align:center; }
+    h1, h2 { color:var(--primary); margin-bottom:1rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .card { background:var(--card); border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,.1); transition:.3s; }
+    .card:hover { transform:scale(1.04); }
+    img { width:100%; height:320px; object-fit:cover; }
+    .card-body { padding:1rem; font-size:0.95rem; }
+    footer { background:#000; color:#fff; text-align:center; padding:1.5rem; margin-top:3rem; }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">🐾 Miami Cat Rescue</div>
     <nav>
+      <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact / Adoptions</a>
+      <a href="contact.html">Contact</a>
       <a href="shop.html">Shop</a>
-      <button class="dark-btn" onclick="toggleDarkMode()">Dark Mode</button>
+      <button class="dark-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
     </nav>
   </header>
 
-  <section class="hero">
-    <!-- Playful cat jumping towards you -->
-    <div class="donny-jump">
-      <video autoplay muted loop playsinline>
-        <source src="https://videos.pexels.com/video-files/857195/857195-hd_1280_720_30fps.mp4" type="video/mp4">
-        Your browser does not support video.
-      </video>
-      <p>Donny is jumping at you! 😻</p>
-    </div>
-    <h1>Save a Feline Life!</h1>
-    <p>Elizabeth Garcia rescues stray cats in Miami & Sebring. Join us!</p>
-    <a href="#adopt" class="btn btn-primary">🐱 Adopt</a>
-    <a href="#donate" class="btn btn-secondary">💖 Donate</a>
-  </section>
-
-  <section class="section" id="about">
-    <h2>Elizabeth Garcia</h2>
-    <p>Over 5 years rescuing strays alone: trapping, spaying, vet care, rehoming. Your support changes lives.</p>
-  </section>
-
-  <section class="section" id="adopt">
-    <h2>Adopt Today</h2>
+  <section class="gallery">
+    <h1>Rescued Cats</h1>
+    <p>Sweet souls Elizabeth has saved — look how precious!</p>
+    
     <div class="grid">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500" alt="Luna">
-        <div class="card-body">
-          <h3>Luna (6 months)</h3>
-          <p>Sweet & cuddly</p>
-          <a href="mailto:Elizabethgarcia2613@gmail.com?subject=Adopt Luna&body=Hi, I want to adopt Luna. My name: " class="btn btn-secondary">Adopt</a>
-        </div>
+        <img src="https://files.catbox.moe/z871a1.JPG" alt="Elizabeth with orange rescue kitten">
+        <div class="card-body"><strong>Donny</strong><br>Playful orange boy ready for a home</div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1495360019602-e05980bf5451?w=500" alt="Simba">
-        <div class="card-body">
-          <h3>Simba (1 year)</h3>
-          <p>Playful</p>
-          <a href="mailto:Elizabethgarcia2613@gmail.com?subject=Adopt Simba&body=Hi, I want to adopt Simba. My name: " class="btn btn-secondary">Adopt</a>
-        </div>
+        <img src="https://files.catbox.moe/9k2p8l.jpg" alt="Gray kitten cuddling post-rescue">
+        <div class="card-body"><strong>Shadow</strong><br>Shy but super cuddly</div>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=500" alt="Mochi">
-        <div class="card-body">
-          <h3>Mochi (2 years)</h3>
-          <p>Loves cuddles</p>
-          <a href="mailto:Elizabethgarcia2613@gmail.com?subject=Adopt Mochi&body=Hi, I want to adopt Mochi. My name: " class="btn btn-secondary">Adopt</a>
-        </div>
+        <img src="https://files.catbox.moe/1v3x5m.jpg" alt="Three kittens asleep in blanket">
+        <div class="card-body"><strong>The Trio</strong><br>Rescued together, looking for homes</div>
+      </div>
+      <div class="card">
+        <img src="https://files.catbox.moe/2k9v3x.jpg" alt="Tiny black kitten with huge eyes">
+        <div class="card-body"><strong>Midnight</strong><br>Tiny black panther full of love</div>
       </div>
     </div>
-  </section>
 
-  <section class="section" id="donate">
-    <h2>Support Us</h2>
-    <p>Every donation helps with food, vet bills, and spay/neuter.</p>
+    <h2>Exotic & Adorable Cats</h2>
+    <p>The rarest, cutest ones on earth — just to melt your heart!</p>
+    
     <div class="grid">
       <div class="card">
-        <div class="card-body">
-          <h3>CashApp</h3>
-          <a href="https://cash.app/$Catsloverss" class="btn btn-primary">Donate via CashApp</a>
-        </div>
+        <img src="https://files.catbox.moe/4j7n2p.jpg" alt="White Persian with blue eyes">
+        <div class="card-body"><strong>Cloud</strong><br>Fluffy white Persian princess</div>
       </div>
       <div class="card">
-        <div class="card-body">
-          <h3>PayPal</h3>
-          <a href="https://paypal.me/Catsloverss" class="btn btn-primary">Donate via PayPal</a>
-        </div>
+        <img src="https://files.catbox.moe/5h3k9z.jpg" alt="Hairless Sphynx looking cuddly">
+        <div class="card-body"><strong>Luna</strong><br>Hairless Sphynx — loves warmth</div>
+      </div>
+      <div class="card">
+        <img src="https://files.catbox.moe/6p2v8m.jpg" alt="Giant fluffy Maine Coon">
+        <div class="card-body"><strong>Thor</strong><br>Giant fluffy Maine Coon</div>
+      </div>
+      <div class="card">
+        <img src="https://files.catbox.moe/7q4x1n.jpg" alt="Scottish Fold with folded ears">
+        <div class="card-body"><strong>Oreo</strong><br>Adorable Scottish Fold</div>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Contact</h2>
-    <p><a href="tel:+17864913579">📱 786-491-3579</a> | <a href="mailto:Elizabethgarcia2613@gmail.com">📧 Elizabethgarcia2613@gmail.com</a></p>
-    <p><a href="gallery.html" class="btn btn-primary">View Gallery</a></p>
   </section>
 
   <footer>
-    <p>© <script>document.write(new Date().getFullYear());</script> Miami Cat Rescue</p>
+    <p>© <script>document.write(new Date().getFullYear());</script> Miami Cat Rescue · Made with love</p>
   </footer>
 
   <script>
@@ -149,7 +104,6 @@
       document.body.classList.toggle('dark');
       localStorage.setItem('darkMode', document.body.classList.contains('dark'));
     }
-    // Load saved preference
     if (localStorage.getItem('darkMode') === 'true') {
       document.body.classList.add('dark');
     }
