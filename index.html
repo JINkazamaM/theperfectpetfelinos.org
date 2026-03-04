@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elizabeth García - Divine Judge | Undefeated</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Impact&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Impact', 'Arial Black', sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+    .hero {
+      height:100vh; min-height:600px;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://i.imgur.com/yGvV0p9.jpg') center/cover no-repeat;
+      display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative;
+    }
+    .title-container { position:relative; z-index:2; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; width:100%; max-width:1200px; padding:0 20px; }
+    .title {
+      font-size: clamp(3.5rem, 12vw, 8rem);
+      color:#FFD700;
+      text-shadow:0 0 40px #00BFFF, 0 0 70px #FFD700;
+      animation:divine-pulse 5s infinite ease-in-out, float 8s infinite ease-in-out;
+      margin:0 60px;
+      letter-spacing: clamp(2px, 1vw, 5px);
+      text-transform:uppercase;
+      flex:1 1 auto;
+      text-align:center;
+      will-change: transform, text-shadow;
+    }
+    .wing {
+      font-size: clamp(4rem, 15vw, 9rem);
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      opacity:0.85;
+      color:#00BFFF;
+      text-shadow:0 0 25px #FFD700;
+      animation:flap 2s infinite alternate ease-in-out, drift 8s infinite linear;
+      will-change: transform;
+    }
+    .left-wing { left:5%; }
+    .right-wing { right:5%; }
+    .extra-wings {
+      position:absolute;
+      top:-50px; left:50%; transform:translateX(-50%);
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      opacity:0.7;
+      animation:flap-extra 3.5s infinite alternate, drift-extra 10s infinite linear;
+      will-change: transform;
+    }
+    @keyframes divine-pulse { 0%,100% {text-shadow:0 0 30px #00BFFF,0 0 50px #FFD700; transform:scale(1);} 50% {text-shadow:0 0 80px #00BFFF,0 0 120px #FFD700; transform:scale(1.06);} }
+    @keyframes float { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-20px);} }
+    @keyframes flap { 0% {transform:rotateY(0deg) translateY(0) scale(1);} 100% {transform:rotateY(15deg) translateY(-8px) scale(1.05);} }
+    @keyframes drift { 0% {transform:translateX(0);} 100% {transform:translateX(15px);} }
+    @keyframes flap-extra { 0% {transform:rotateY(0deg) scale(1);} 100% {transform:rotateY(-12deg) scale(1.08);} }
+    @keyframes drift-extra { 0% {transform:translateX(-50%) translateY(0);} 100% {transform:translateX(40%) translateY(-20px);} }
+    .subtitle { font-size: clamp(1.4rem, 5vw, 2.8rem); color:#00BFFF; text-shadow:0 0 25px #FFD700; margin:15px 0; padding:0 20px; }
+    .symbols { font-size: clamp(2.5rem, 8vw, 5rem); margin:10px 0; opacity:0.9; }
+    .story { padding:30px 15px; max-width:1000px; margin:20px auto; background:#111; border-radius:20px; box-shadow:0 0 40px #FFD700; font-size: clamp(1rem, 3.5vw, 1.7rem); line-height:1.5; }
+    .story h2 { font-size: clamp(1.8rem, 6vw, 3.5rem); color:#FFD700; text-align:center; text-shadow:0 0 20px #00BFFF; margin-bottom:15px; }
+    .audio-btn { display:block; margin:20px auto; padding:12px 30px; font-size: clamp(1.2rem, 4vw, 1.6rem); background:#FFD700; color:#000; border:none; border-radius:12px; cursor:pointer; box-shadow:0 0 25px #00BFFF; transition:0.3s; width:80%; max-width:300px; }
+    .audio-btn:hover { background:#00BFFF; color:#fff; }
+    .gallery { padding:30px 15px; max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+    .gallery img, .gallery video { width:100%; border-radius:18px; border:4px solid #FFD700; box-shadow:0 0 35px rgba(255,215,0,0.7); transition:transform 0.3s; }
+    .gallery img:hover, .gallery video:hover { transform:scale(1.05); box-shadow:0 0 60px #00BFFF; }
+    .quote { font-size: clamp(1.6rem, 5vw, 2.8rem); font-style:italic; color:#FFD700; text-align:center; padding:40px 15px; background:#111; margin:30px 0; border-radius:18px; }
+    footer { text-align:center; padding:30px 15px; background:#000; border-top:4px solid #FFD700; font-size: clamp(1rem, 4vw, 1.8rem); }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="title-container">
+      <div class="wing left-wing">🕊️</div>
+      <h1 class="title">ELIZABETH GARCÍA</h1>
+      <div class="wing right-wing">🕊️</div>
+      <div class="extra-wings">🕊️🕊️🕊️🕊️</div>
+    </div>
+    <p class="subtitle">Supreme Divine Judge • Undefeated • Miami-Dade</p>
+    <p class="symbols">⚖️🗡️🪄</p>
+    <p>December 26, 1984 • Her word is LAW</p>
+  </div>
+
+  <div class="quote">
+    "When I step into court... demons run scared.
+    With money or without it, I do whatever the fuck I want.
+    And my word? IS THE FUCKING LAW."
+  </div>
+
+  <div class="story">
+    <h2>The Total Betrayal, Spiritual War, and Targeted Individual</h2>
+    <p>Everyone turned against her: family, friends, everyone... the whole world. They beat her, abused her, robbed her, deceived her. But they didn't stop there. They sent witchcraft, satanic rituals, curses, dark spiritual attacks, helicopters crashing behind her, invisible assaults... everything at once, trying to finish her off. And on top of that, since she was young, she has always been a targeted individual: hunted by government satellites, monitored, irradiated, manipulated. Everything combined into the perfect hell to destroy her. They wanted her dead, broken, gone. But Elizabeth didn't break. She overcame every physical blow, every betrayal, every satanic ritual, every curse, every satellite beam. She came out victorious, free, stronger and brighter than ever. Those who attacked her with demons, lies, and tech ended up paying the price. She? Still standing, undefeated, with the authority of God.</p>
+    <button class="audio-btn" onclick="document.getElementById('story-audio').play()">Listen to the story (celestial voice)</button>
+    <audio id="story-audio" src="https://files.catbox.moe/bh6kf3.mp3"></audio>
+  </div>
+
+  <div class="gallery">
+    <img src="https://i.imgur.com/yGvV0p9.jpg" alt="Elizabeth killer stare">
+    <img src="https://i.imgur.com/KZuoF5y.jpg" alt="Elizabeth with cat">
+    <img src="https://i.imgur.com/BsKgTHw.jpg" alt="Elizabeth fireworks">
+    <img src="https://i.imgur.com/CLaEXrP.jpg" alt="Elizabeth tigress">
+    <img src="https://i.imgur.com/rlwx0GH.jpg" alt="Elizabeth selfie">
+    <img src="https://i.imgur.com/tC5xPP3.jpg" alt="Divine judge sword">
+    <img src="https://i.imgur.com/lQj5UVs.jpg" alt="Elizabeth with healing angel">
+    <video autoplay loop muted playsinline src="https://i.imgur.com/lQj5UVs.mp4"></video>
+    <video autoplay loop muted playsinline src="https://i.imgur.com/NMjIPXM.mp4"></video>
+    <video autoplay loop muted playsinline src="https://i.imgur.com/qCB5Nii.mp4"></video>
+    <video autoplay loop muted playsinline src="https://i.imgur.com/4pgZ3TR.mp4"></video>
+  </div>
+
+  <div class="quote">
+    "The setup failed. The traitors and demons fell. She shines eternal."
+  </div>
+
+  <footer>
+    Elizabeth García • Supreme in Miami-Dade • The one who defeated hell
+  </footer>
+
+</body>
+</html>
